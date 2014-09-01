@@ -1,0 +1,25 @@
+Ideal:
+
+Current Proposals
+"proposal" "voting"
+
+Rejected Proposals
+"proposal" "rejected"
+
+(Types of proposals:
+ "new rule"
+ "amendment"
+ "transmutation"
+ "repeal"
+)
+
+Current Rules
+"rule" !"amended" !"repealed"
+
+---
+
+Proposals will be recorded as "p#"
+
+---
+
+The text of a rule is stored by identification number.
