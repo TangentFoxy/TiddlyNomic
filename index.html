@@ -229,6 +229,8 @@ Error message and password prompt
 
 <li>Current Votes</li>
 
+<li>Downloads</li>
+
 <li>drafting</li>
 
 <li>enacted</li>
@@ -5998,8 +6000,9 @@ Error message and password prompt
 <div caption="{{$:/language/SideBar/Recent/Caption}}" created="20150630041940294" creator="Guard13007" modified="20150630141000888" modifier="Guard13007" tags="$:/tags/SideBar" title="$:/core/ui/SideBar/Recent">
 <pre>&lt;&lt;timeline limit:&quot;50&quot; format:&quot;YYYY/0MM/0DD&quot;&gt;&gt;</pre>
 </div>
-<div bag="default" created="20140226190958581" creator="Guard13007" modified="20150629222703577" modifier="Guard13007" revision="0" title="$:/DefaultTiddlers" type="text/vnd.tiddlywiki">
-<pre>[[Current Votes]]
+<div bag="default" created="20140226190958581" creator="Guard13007" modified="20150725182825431" modifier="Guard13007" revision="0" title="$:/DefaultTiddlers" type="text/vnd.tiddlywiki">
+<pre>TiddlyNomic
+[[Current Votes]]
 About</pre>
 </div>
 <div status="complete" title="$:/Import">
@@ -6116,7 +6119,7 @@ About</pre>
 <div modified="20150629184527553" modifier="Guard13007" title="$:/state/plugin-info--270617185-$:/themes/tiddlywiki/snowwhite">
 <pre>no</pre>
 </div>
-<div modified="20150725061043014" modifier="Guard13007" title="$:/state/showeditpreview">
+<div modified="20150725184016689" modifier="Guard13007" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
 <div modified="20150701053927398" modifier="Guard13007" title="$:/state/sidebar">
@@ -6137,8 +6140,8 @@ About</pre>
 <div modified="20150629183800435" modifier="Guard13007" title="$:/state/tab--959111941">
 <pre>$:/core/ui/ControlPanel/TiddlerFields</pre>
 </div>
-<div modified="20150705232451695" modifier="Guard13007" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Saving</pre>
+<div modified="20150725182805272" modifier="Guard13007" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div modified="20150725060555356" modifier="Guard13007" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/All</pre>
@@ -6175,10 +6178,10 @@ About</pre>
     }
 }</pre>
 </div>
-<div created="20150629190138299" creator="Guard13007" modified="20150725061846240" modifier="Guard13007" title="$:/temp/NewTagName">
+<div created="20150629190138299" creator="Guard13007" modified="20150725183330463" modifier="Guard13007" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20150629191924723" creator="Guard13007" modified="20150724064925389" modifier="Guard13007" title="$:/temp/search">
+<div created="20150629191924723" creator="Guard13007" modified="20150725184003840" modifier="Guard13007" title="$:/temp/search">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.8">
@@ -6278,8 +6281,8 @@ About</pre>
     }
 }</pre>
 </div>
-<div created="20150629184029987" creator="Guard13007" modified="20150629184032106" modifier="Guard13007" title="$:/UploadName">
-<pre>tiddlynomic</pre>
+<div created="20150629184029987" creator="Guard13007" modified="20150725182759378" modifier="Guard13007" title="$:/UploadName">
+<pre></pre>
 </div>
 <div bag="default" created="20140226211043544" creator="Guard13007" modified="20150701220658529" modifier="Guard13007" revision="0" tags="info" title="About" type="text/vnd.tiddlywiki">
 <pre>&lt;span style=&quot;float:right;&quot;&gt;(New player? Read [[Getting Started Quick]])&lt;/span&gt;
@@ -6420,6 +6423,16 @@ Records:
 &lt;h2&gt;&lt;$link to={{!!title}}&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt; (&lt;$view field=&quot;vote-status&quot;/&gt;)&lt;/h2&gt;
 
 &lt;$transclude mode=&quot;block&quot;/&gt;&lt;/$list&gt;</pre>
+</div>
+<div created="20150725183343601" creator="Guard13007" modified="20150725184124245" modifier="Guard13007" tags="info" title="Downloads">
+<pre>The latest (and recommended) version is 1.2. That said, take a look at some of the changes in this on-going game, because there are some ideas that are going to be added to the next version.
+
+|!Version|!Changes|
+|&lt;a href=&quot;https://guard13007.github.io/TiddlyNomic/versions/TiddlyNomic_v1.2.htm&quot; download=&quot;TiddlyNomic.html&quot;&gt;v1.2&lt;/a&gt;|N/A|
+|&lt;a href=&quot;https://guard13007.github.io/TiddlyNomic/versions/TiddlyNomic_v1.1.htm&quot; download=&quot;TiddlyNomic.html&quot;&gt;v1.1&lt;/a&gt;|N/A|
+|&lt;a href=&quot;https://guard13007.github.io/TiddlyNomic/versions/TiddlyNomic_v1.htm&quot; download=&quot;TiddlyNomic.html&quot;&gt;v1&lt;/a&gt;|N/A|
+
+^^Changelogs don't exist for v1.2 and older, sorry.^^</pre>
 </div>
 <div color="#ff6600" created="20150629194859385" creator="Guard13007" icon="$:/core/images/theme-button" modified="20150629200918298" modifier="Guard13007" title="drafting">
 <pre></pre>
@@ -7631,12 +7644,14 @@ It also contains custom fields for all custom field types that exist:
 *$:/language/Docs/Fields/proposal-type
 *$:/language/Docs/Fields/vote-status</pre>
 </div>
-<div bag="default" created="20140227020259516" creator="Guard13007" modified="20150629202801771" modifier="Guard13007" revision="0" tags="info" title="TiddlyNomic" type="text/vnd.tiddlywiki">
-<pre>Nomic is a game about changing the rules of the game:
+<div bag="default" created="20140227020259516" creator="Guard13007" modified="20150725184030792" modifier="Guard13007" revision="0" tags="info" title="TiddlyNomic" type="text/vnd.tiddlywiki">
+<pre>!!Nomic is a game about changing the rules of the game.
 
 &gt;Nomic is a game in which changing the rules is a move. In that respect it differs from almost every other game. The primary activity of Nomic is proposing changes in the rules, debating the wisdom of changing them in that way, voting on the changes, deciding what can and cannot be done afterwards, and doing it. Even this core of the game, of course, can be changed. (Peter Suber, //The Paradox of ~Self-Amendment//, Appendix 3, p. 362)
 
-~TiddlyNomic is the use of a [[TiddlyWiki|http://tiddlywiki.com/#TiddlyWiki]] for playing a game of Nomic. By default, it contains the Initial Set of rules as presented [[here|http://legacy.earlham.edu/~peters/writing/nomic.htm#initial%20set]] and GettingStarted which explains how I intend this ~TiddlyWiki to be used.</pre>
+~TiddlyNomic is the use of a [[TiddlyWiki|http://tiddlywiki.com/#TiddlyWiki]] for playing a game of Nomic. By default, it contains the Initial Set of rules as presented [[here|http://legacy.earlham.edu/~peters/writing/nomic.htm#initial%20set]] and GettingStarted which explains how I intend this ~TiddlyWiki to be used.
+
+This page is an on-going game of Nomic using ~TiddlyNomic. If you want a fresh copy to run your own game, see the [[Downloads]].</pre>
 </div>
 <div created="20150629191657698" creator="Guard13007" modified="20150701054657070" modifier="Guard13007" title="ToDo">
 <pre>[[Template]] (testing shit)
