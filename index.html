@@ -207,6 +207,8 @@ Error message and password prompt
 
 <li>About</li>
 
+<li>Administrator's Quick Reference</li>
+
 <li>amended</li>
 
 <li>Amended Rules</li>
@@ -347,6 +349,8 @@ Error message and password prompt
 
 <li>Proposal 317</li>
 
+<li>Proposal 318</li>
+
 <li>rejected</li>
 
 <li>Rejected Proposals</li>
@@ -457,6 +461,8 @@ Error message and password prompt
 
 <li>ToDo</li>
 
+<li>ToDo.old</li>
+
 <li>transmutation</li>
 
 <li>transmuted</li>
@@ -498,6 +504,8 @@ Error message and password prompt
 <li>Vote 316</li>
 
 <li>Vote 317</li>
+
+<li>Vote 318</li>
 
 <li>voting</li>
 
@@ -6125,7 +6133,7 @@ About</pre>
 <div modified="20150629184527553" modifier="Guard13007" title="$:/state/plugin-info--270617185-$:/themes/tiddlywiki/snowwhite">
 <pre>no</pre>
 </div>
-<div modified="20150725184016689" modifier="Guard13007" title="$:/state/showeditpreview">
+<div modified="20160505212748471" modifier="Guard13007" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
 <div modified="20150701053927398" modifier="Guard13007" title="$:/state/sidebar">
@@ -6149,7 +6157,7 @@ About</pre>
 <div modified="20150725182805272" modifier="Guard13007" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div modified="20150725060555356" modifier="Guard13007" title="$:/state/tab/moresidebar-401116514">
+<div modified="20160505210708679" modifier="Guard13007" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
 <div modified="20150725060553843" modifier="Guard13007" title="$:/state/tab/sidebar--1835078512">
@@ -6184,11 +6192,11 @@ About</pre>
     }
 }</pre>
 </div>
-<div created="20150629190138299" creator="Guard13007" modified="20160505175253406" modifier="Guard13007" title="$:/temp/NewTagName">
+<div created="20150629190138299" creator="Guard13007" modified="20160505212921454" modifier="Guard13007" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20150629191924723" creator="Guard13007" modified="20160505175019345" modifier="Guard13007" title="$:/temp/search">
-<pre>voting</pre>
+<div created="20150629191924723" creator="Guard13007" modified="20160505210905723" modifier="Guard13007" title="$:/temp/search">
+<pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.8">
 <pre>{
@@ -6316,7 +6324,35 @@ Records:
 |[[Amended|Amended Rules]]|[[Enacted|Enacted Proposals]]|[[Complete|Complete Votes]]|[[Complete|Complete Judgments]]|
 |[[Repealed|Repealed Rules]]|[[Rejected|Rejected Proposals]]| |[[Overruled|Overruled Judgments]]|</pre>
 </div>
-<div color="#8844cc" created="20150629194606267" creator="Guard13007" icon="$:/core/images/new-journal-button" modified="20150629201332473" modifier="Guard13007" title="amended">
+<div created="20160505211506953" creator="Guard13007" modified="20160505212635368" modifier="Guard13007" tags="info" title="Administrator's Quick Reference">
+<pre>!!! New Proposal
+
+# Create tiddler with name &quot;Proposal ''#''&quot;
+## TODO: Replace these instructions with &quot;copy [[template]] and edit appropriately&quot;
+## It needs to be tagged: &quot;proposal&quot;
+## Its type needs to be tagged: &quot;new rule&quot;, &quot;amendment&quot;, or &quot;repeal&quot;
+## Its type needs to be added in a custom field:
+##* ''proposal-type'': &quot;new rule&quot;, &quot;amendment&quot;, or &quot;repeal&quot;
+## Its text needs to be the Proposal itself, followed by a link at the bottom to &quot;Vote ''#''&quot;
+# Create tiddler with name &quot;Vote ''#''&quot;
+## TODO: Replace these instructions with &quot;copy [[template]] and link to appropriate stuff&quot;
+## It needs to be tagged: &quot;vote&quot;
+## It must start with a link to &quot;Proposal ''#''&quot;
+## It must state who has proposed it and the votes recorded (edited as votes come in).
+## If it enacts a new rule or amends a rule, it must end with a link to &quot;Rule ''#''&quot;
+
+* ''#'' refers to the reference number for //the// proposal/vote/rule.
+
+!!! Completing a Vote
+
+Todo re-read the rules about early enactment of rules!
+
+TODO: This whole thing again after I make templates and figure out how to copy stuff easily.
+
+Question to self: Do we record absence of players when they go inactive?
+</pre>
+</div>
+<div color="#8844cc" created="20150629194606267" creator="Guard13007" icon="$:/core/images/new-journal-button" modified="20160505211130438" modifier="Guard13007" title="amended">
 <pre></pre>
 </div>
 <div created="20150701023841943" creator="Guard13007" modified="20150701023855334" modifier="Guard13007" tags="info list" title="Amended Rules">
@@ -6487,8 +6523,12 @@ Amended by [[Example Proposal 301 (enacted amendment)]].</pre>
 <div color="#eeeeee" created="20150629211750796" creator="Guard13007" icon="$:/core/images/blank" modified="20150630165955703" modifier="Guard13007" title="excludeLists">
 <pre></pre>
 </div>
-<div created="20150701034932155" creator="Guard13007" modified="20160504234013116" modifier="Guard13007" tags="info" title="Getting Started Quick">
-<pre>The primary thing to consider as a player is when to vote:
+<div created="20150701034932155" creator="Guard13007" modified="20160505205148326" modifier="Guard13007" tags="info" title="Getting Started Quick">
+<pre>Want to join the game? Send an email to [[paul.liverman.iii@gmail.com|mailto:paul.liverman.iii@gmail.com]] and make sure you include &quot;''Nomic''&quot; in the subject!
+
+---
+
+The primary thing to consider as a player is when to vote:
 
 #The administrator will notify you when a proposal has been submitted for voting.
 #You have 24 hours to vote on that proposal, or you will become an inactive player, and receive no further notification until you become a(n active) player again (by voting on a proposal) (see [[Rule 315]]).
@@ -6651,14 +6691,17 @@ define how a vacant office operates (the administrator becomes the officer?)
 
 ,,OOR = Out Of Rules (stuff to add to site design, not game rules),,</pre>
 </div>
-<div created="20150701215117550" creator="Guard13007" modified="20150701215516604" modifier="Guard13007" tags="info" title="History">
+<div created="20150701215117550" creator="Guard13007" modified="20160505205808966" modifier="Guard13007" tags="info" title="History">
 <pre>&lt;span style=&quot;float:right;&quot;&gt;,,(General history and notes not officially used for any purpose.),,&lt;/span&gt;
 
-;June 29th, 2015
-:The first day of ~TiddlyNomic. Not much happened.
-;June30th - July 1st, 2015
-:The day(s) the first administrator fucked up everything and then had to fix it.
-:(See Judgments [[1|Judgment 1]] and [[2|Judgment 2]], as well as Proposals [[306|Proposal 306]], [[307|Proposal 307]], and [[308|Proposal 308]].)</pre>
+; June 29th, 2015
+: The first day of ~TiddlyNomic. Not much happened.
+; June 30th - July 1st, 2015
+: The day(s) the first administrator fucked up everything and then had to fix it.
+: (See Judgments [[1|Judgment 1]] and [[2|Judgment 2]], as well as Proposals [[306|Proposal 306]], [[307|Proposal 307]], and [[308|Proposal 308]].)
+; May 4th, 2016
+: The game was resumed at the prompting of our newest player, John-Richard.
+</pre>
 </div>
 <div color="#0088dd" created="20150629193556046" creator="Guard13007" icon="$:/core/images/locked-padlock" modified="20150629200419648" modifier="Guard13007" title="immutable">
 <pre></pre>
@@ -6734,12 +6777,12 @@ As these proposals were also created by the administrator, it is an even larger 
 <div color="#000000" created="20150629193617084" creator="Guard13007" icon="$:/core/icon" modified="20150629201528831" modifier="Guard13007" title="player">
 <pre></pre>
 </div>
-<div bag="default" created="20140227023909836" creator="Guard13007" modified="20150725061523581" modifier="Guard13007" revision="0" tags="info list" title="Players" type="text/vnd.tiddlywiki">
+<div bag="default" created="20140227023909836" creator="Guard13007" modified="20160505213113798" modifier="Guard13007" revision="0" tags="info list" title="Players" type="text/vnd.tiddlywiki">
 <pre>|!Office|!Name|!Contact|!Points|
-|Administrator|Paul Liverman III ([[Guard13007]])|[[paul.liverman.iii@gmail.com|mailto:paul.liverman.iii@gmail.com]]|128|
+|Administrator|Paul Liverman III ([[Guard13007]])|[[paul.liverman.iii@gmail.com|mailto:paul.liverman.iii@gmail.com]]|154|
 | |Amie Stover|[[Facebook|https://www.facebook.com/messages/Elflock2]]^^*^^|0|
-| |Allan Simonsen|[[Facebook|https://www.facebook.com/messages/allan.simonsen.5]]^^*^^|33|
 | |Steven Voorheis|[[Facebook|https://www.facebook.com/messages/WhiteFang1795]]^^*^^|25|
+| |John-Richard Isenhour|[[jrisenhour@gmail.com|mailto:jrisenhour@gmail.com]]|0|
 
 Honorary players:
 
@@ -6753,13 +6796,14 @@ Inactive players:
 |!Office|!Name|!Contact|!Points|
 | |Nilton Duran|[[Facebook|https://www.facebook.com/messages/nilton.duran.3]]^^*^^|20|
 | |Christopher Peay|[[Facebook|https://www.facebook.com/messages/100002651130522]]^^*^^|0|
+| |Allan Simonsen|[[Facebook|https://www.facebook.com/messages/allan.simonsen.5]]^^*^^|33|
 
 Former players:
 
 |!Name|!Contact|!Points|
 |Zach Hebert|[[Facebook|https://www.facebook.com/messages/zach.hebert.3]]^^*^^|0|
 
-,,*Not sure if valid contact details for everyone or just the administrator.,,</pre>
+,,*Not sure if valid contact details for everyone or just friends on Facebook.,,</pre>
 </div>
 <div color="#008800" created="20150629194302623" creator="Guard13007" icon="$:/core/images/edit-button" modified="20150629200927191" modifier="Guard13007" title="proposal">
 <pre></pre>
@@ -7230,6 +7274,11 @@ This rule supersedes any other rules about turn order.
 
 [[Vote 317]]</pre>
 </div>
+<div created="20160505210807249" creator="Guard13007" modified="20160505212917487" modifier="Guard13007" proposal-type="new rule" tags="proposal [[new rule]]" title="Proposal 318">
+<pre>The game must be thought provoking and or fun at all times. If at any point the game ceases to be either fun or thought provoking, then new rules must proposed and or amended to restore proper entertainment value.
+
+[[Vote 318]]</pre>
+</div>
 <div color="#ff0000" created="20150629194746949" creator="Guard13007" icon="$:/core/images/close-button" modified="20150629201158425" modifier="Guard13007" title="rejected">
 <pre></pre>
 </div>
@@ -7669,7 +7718,20 @@ It also contains custom fields for all custom field types that exist:
 
 This page is an on-going game of Nomic using ~TiddlyNomic. If you want a fresh copy to run your own game, see the [[Downloads]].</pre>
 </div>
-<div created="20150629191657698" creator="Guard13007" modified="20150701054657070" modifier="Guard13007" title="ToDo">
+<div created="20160505205420859" creator="Guard13007" modified="20160505212749481" modifier="Guard13007" tags="excludeLists" title="ToDo">
+<pre>This is a todo list for the maintainer of this site / game / the administrator.. which is Paul, or [[Guard13007]].
+
+# Stuff with [[Tags]], [[Administrator's Quick Reference]], [[Turn Status]], and replacement of [[Voting Quick Reference]].
+# Correct / Update [[GettingStarted]].
+# Remove pieces of this page that exist as a guide for running your own game, ''but only if they exist in a downloadable fresh copy!!''
+# Link to the [[History]] in [[About]].
+# Stuff in [[ToDo.old]]
+# [[stuffnsofse]]
+# Make templates for Proposals, Votes, as well as a quick reference for administrating
+# Make every tag tiddler say what it is supposed to be used for, and have excludeLists on it. (Also list every tiddler that has the tag except onces tagged excludeLists.) (Note to self: See [[Turn Status]] current votes list for an example of listing tiddlers.)
+</pre>
+</div>
+<div created="20150629191657698" creator="Guard13007" modified="20160505205933089" modifier="Guard13007" title="ToDo.old">
 <pre>[[Template]] (testing shit)
 
 * Add a form for making a new proposal that automatically creates the tags / fields needed.
@@ -7959,6 +8021,20 @@ This page is an on-going game of Nomic using ~TiddlyNomic. If you want a fresh c
 &lt;$checkbox tag=&quot;complete&quot;&gt;Complete?&lt;/$checkbox&gt;
 
 [[Rule 317]]</pre>
+</div>
+<div created="20160505212924327" creator="Guard13007" modified="20160505213043589" modifier="Guard13007" tags="vote" title="Vote 318" vote-status="Voting">
+<pre>[[Proposal 318]]
+
+|!Proposed by|John-Richard Isenhour|
+|!Status|&lt;$select field=&quot;vote-status&quot;&gt;&lt;option&gt;Debate&lt;/option&gt;&lt;option&gt;Voting&lt;/option&gt;&lt;option&gt;Enacted&lt;/option&gt;&lt;option&gt;Rejected&lt;/option&gt;&lt;/$select&gt;|
+
+|!Name|!Vote|!Points|
+|John-Richard Isenhour|yes| |
+|Paul Liverman III|no| |
+|Amie Stover| | |
+|Steven Voorheis| | |
+
+&lt;$checkbox tag=&quot;complete&quot;&gt;Complete?&lt;/$checkbox&gt;</pre>
 </div>
 <div color="#aaff33" created="20150629194656573" creator="Guard13007" icon="$:/core/images/warning" modified="20150629212013436" modifier="Guard13007" title="voting">
 <pre></pre>
