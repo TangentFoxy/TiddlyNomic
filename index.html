@@ -449,6 +449,8 @@ Error message and password prompt
 
 <li>Rule 317</li>
 
+<li>Rule 318</li>
+
 <li>SiteSubtitle</li>
 
 <li>SiteTitle</li>
@@ -456,6 +458,10 @@ Error message and password prompt
 <li>stuffnsofse</li>
 
 <li>Tags</li>
+
+<li>Templates</li>
+
+<li>TemplateValues</li>
 
 <li>TiddlyNomic</li>
 
@@ -6160,7 +6166,7 @@ About</pre>
 <div modified="20160505210708679" modifier="Guard13007" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div modified="20150725060553843" modifier="Guard13007" title="$:/state/tab/sidebar--1835078512">
+<div modified="20160506210732865" modifier="Guard13007" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div modified="20150629183920986" modifier="Guard13007" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -6192,7 +6198,7 @@ About</pre>
     }
 }</pre>
 </div>
-<div created="20150629190138299" creator="Guard13007" modified="20160505212921454" modifier="Guard13007" title="$:/temp/NewTagName">
+<div created="20150629190138299" creator="Guard13007" modified="20160506203455169" modifier="Guard13007" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
 <div created="20150629191924723" creator="Guard13007" modified="20160505210905723" modifier="Guard13007" title="$:/temp/search">
@@ -6777,12 +6783,12 @@ As these proposals were also created by the administrator, it is an even larger 
 <div color="#000000" created="20150629193617084" creator="Guard13007" icon="$:/core/icon" modified="20150629201528831" modifier="Guard13007" title="player">
 <pre></pre>
 </div>
-<div bag="default" created="20140227023909836" creator="Guard13007" modified="20160505213113798" modifier="Guard13007" revision="0" tags="info list" title="Players" type="text/vnd.tiddlywiki">
+<div bag="default" created="20140227023909836" creator="Guard13007" modified="20160506210709182" modifier="Guard13007" revision="0" tags="info list" title="Players" type="text/vnd.tiddlywiki">
 <pre>|!Office|!Name|!Contact|!Points|
-|Administrator|Paul Liverman III ([[Guard13007]])|[[paul.liverman.iii@gmail.com|mailto:paul.liverman.iii@gmail.com]]|154|
+|Administrator|Paul Liverman III ([[Guard13007]])|[[paul.liverman.iii@gmail.com|mailto:paul.liverman.iii@gmail.com]]|164|
 | |Amie Stover|[[Facebook|https://www.facebook.com/messages/Elflock2]]^^*^^|0|
 | |Steven Voorheis|[[Facebook|https://www.facebook.com/messages/WhiteFang1795]]^^*^^|25|
-| |John-Richard Isenhour|[[jrisenhour@gmail.com|mailto:jrisenhour@gmail.com]]|0|
+| |John-Richard Isenhour|[[jrisenhour@gmail.com|mailto:jrisenhour@gmail.com]]|20|
 
 Honorary players:
 
@@ -7678,10 +7684,11 @@ When a proposed rule-change is defeated, the player who proposed it loses points
 
 `This is so that players will lose points at the same rate that they can gain them.`</pre>
 </div>
-<div created="20160505175140223" creator="Guard13007" modified="20160505175443470" modifier="Guard13007" mutability="mutable" tags="rule mutable" title="Rule 317">
-<pre>John-Richard Isenhour is hereby a player.
-
-[[Vote 317]]</pre>
+<div created="20160505175140223" creator="Guard13007" modified="20160506210131842" modifier="Guard13007" mutability="mutable" tags="rule mutable" title="Rule 317">
+<pre>John-Richard Isenhour is hereby a player.</pre>
+</div>
+<div created="20160506210333595" creator="Guard13007" modified="20160506210402633" modifier="Guard13007" mutability="mutable" tags="mutable rule" title="Rule 318">
+<pre>The game must be thought provoking and or fun at all times. If at any point the game ceases to be either fun or thought provoking, then new rules must proposed and or amended to restore proper entertainment value.</pre>
 </div>
 <div bag="default" created="20140226191019160" creator="Guard13007" modified="20150629212311425" modifier="Guard13007" revision="0" title="SiteSubtitle" type="text/vnd.tiddlywiki">
 <pre>[[Rules|Current Rules]] | [[Proposals|Current Proposals]] | [[Votes|Current Votes]] | [[Players]]</pre>
@@ -7709,6 +7716,51 @@ It also contains custom fields for all custom field types that exist:
 *$:/language/Docs/Fields/proposal-type
 *$:/language/Docs/Fields/vote-status</pre>
 </div>
+<div created="20160506202629102" creator="Guard13007" modified="20160506205915419" modifier="Guard13007" tags="template" title="Templates">
+<pre>\define propRef() Proposal $(ref)$
+\define voteRef() Vote $(ref)$
+\define ruleRef() Rule $(ref)$
+\define proposalType() $(proptype)$
+\define proposalTags() proposal $(proptype)$
+
+\define proposalTemplate()
+PROPOSAL TEXT GOES HERE
+
+[[Vote $(ref)$]]
+\end
+
+\define voteTemplate()
+[[Proposal $(ref)$]]
+
+|!Proposed by|$(player)$|
+|!Status|&lt;$select field=&quot;vote-status&quot;&gt;&lt;option&gt;Debate&lt;/option&gt;&lt;option&gt;Voting&lt;/option&gt;&lt;option&gt;Enacted&lt;/option&gt;&lt;option&gt;Rejected&lt;/option&gt;&lt;/$select&gt;|
+
+|!Name|!Vote|!Points|
+|John-Richard Isenhour| | |
+|Paul Liverman III| | |
+|Amie Stover| | |
+|Steven Voorheis| | |
+
+&lt;$checkbox tag=&quot;complete&quot;&gt;Complete?&lt;/$checkbox&gt;
+\end
+
+\define ruleTemplate() RULE TEXT GOES HERE
+
+&lt;$set name=&quot;ref&quot; value={{TemplateValues!!ref}}&gt;
+&lt;$set name=&quot;player&quot; value={{TemplateValues!!player}}&gt;
+&lt;$set name=&quot;proptype&quot; value={{TemplateValues!!proptype}}&gt;
+
+|Next reference number:|&lt;$edit tiddler=&quot;TemplateValues&quot; field=&quot;ref&quot;/&gt;|Next unused integer.|
+|Proposing player (for votes):|&lt;$edit tiddler=&quot;TemplateValues&quot; field=&quot;player&quot;/&gt;|One of: [[Players]]|
+|Proposal type (for proposals):|&lt;$edit tiddler=&quot;TemplateValues&quot; field=&quot;proptype&quot;/&gt;|One of: `[[new rule]]`, `amendment`, or `repeal`|
+|&lt;$button&gt;&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; title=&lt;&lt;propRef&gt;&gt; tags=&lt;&lt;proposalTags&gt;&gt; text=&lt;&lt;proposalTemplate&gt;&gt; proposal-type=&lt;&lt;proposalType&gt;&gt;/&gt;New Proposal&lt;/$button&gt;|&lt;$button&gt;&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; title=&lt;&lt;voteRef&gt;&gt; tags=&quot;vote&quot; text=&lt;&lt;voteTemplate&gt;&gt; vote-status=&quot;Debate&quot;/&gt;New Vote&lt;/$button&gt;|&lt;$button&gt;&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; title=&lt;&lt;ruleRef&gt;&gt; tags=&quot;mutable rule&quot; text=&lt;&lt;ruleTemplate&gt;&gt; mutability=&quot;mutable&quot;/&gt;New Rule&lt;/$button&gt;|
+
+&lt;/$set&gt;&lt;/$set&gt;&lt;/$set&gt;
+</pre>
+</div>
+<div created="20160506203448675" creator="Guard13007" modified="20160506205851682" modifier="Guard13007" player="Paul Liverman III" proptype="[[new rule]]" ref="318" tags="template" title="TemplateValues">
+<pre>This tiddler exists just for its fields to be modified inside [[Templates]].</pre>
+</div>
 <div bag="default" created="20140227020259516" creator="Guard13007" modified="20150725184030792" modifier="Guard13007" revision="0" tags="info" title="TiddlyNomic" type="text/vnd.tiddlywiki">
 <pre>!!Nomic is a game about changing the rules of the game.
 
@@ -7718,10 +7770,10 @@ It also contains custom fields for all custom field types that exist:
 
 This page is an on-going game of Nomic using ~TiddlyNomic. If you want a fresh copy to run your own game, see the [[Downloads]].</pre>
 </div>
-<div created="20160505205420859" creator="Guard13007" modified="20160505212749481" modifier="Guard13007" tags="excludeLists" title="ToDo">
+<div created="20160505205420859" creator="Guard13007" modified="20160506210326070" modifier="Guard13007" tags="excludeLists" title="ToDo">
 <pre>This is a todo list for the maintainer of this site / game / the administrator.. which is Paul, or [[Guard13007]].
 
-# Stuff with [[Tags]], [[Administrator's Quick Reference]], [[Turn Status]], and replacement of [[Voting Quick Reference]].
+# Stuff with [[Tags]], [[Administrator's Quick Reference]], [[Turn Status]], and replacement of [[Voting Quick Reference]]. Check out [[Templates]]!
 # Correct / Update [[GettingStarted]].
 # Remove pieces of this page that exist as a guide for running your own game, ''but only if they exist in a downloadable fresh copy!!''
 # Link to the [[History]] in [[About]].
@@ -7729,6 +7781,7 @@ This page is an on-going game of Nomic using ~TiddlyNomic. If you want a fresh c
 # [[stuffnsofse]]
 # Make templates for Proposals, Votes, as well as a quick reference for administrating
 # Make every tag tiddler say what it is supposed to be used for, and have excludeLists on it. (Also list every tiddler that has the tag except onces tagged excludeLists.) (Note to self: See [[Turn Status]] current votes list for an example of listing tiddlers.)
+# What is the voting tag for?
 </pre>
 </div>
 <div created="20150629191657698" creator="Guard13007" modified="20160505205933089" modifier="Guard13007" title="ToDo.old">
@@ -8022,19 +8075,21 @@ This page is an on-going game of Nomic using ~TiddlyNomic. If you want a fresh c
 
 [[Rule 317]]</pre>
 </div>
-<div created="20160505212924327" creator="Guard13007" modified="20160505213043589" modifier="Guard13007" tags="vote" title="Vote 318" vote-status="Voting">
+<div created="20160505212924327" creator="Guard13007" modified="20160506210713833" modifier="Guard13007" tags="vote complete" title="Vote 318" vote-status="Enacted">
 <pre>[[Proposal 318]]
 
 |!Proposed by|John-Richard Isenhour|
 |!Status|&lt;$select field=&quot;vote-status&quot;&gt;&lt;option&gt;Debate&lt;/option&gt;&lt;option&gt;Voting&lt;/option&gt;&lt;option&gt;Enacted&lt;/option&gt;&lt;option&gt;Rejected&lt;/option&gt;&lt;/$select&gt;|
 
 |!Name|!Vote|!Points|
-|John-Richard Isenhour|yes| |
-|Paul Liverman III|no| |
-|Amie Stover| | |
-|Steven Voorheis| | |
+|John-Richard Isenhour|yes|+20|
+|Paul Liverman III|no|+10|
+|Amie Stover|yes|0|
+|Steven Voorheis|yes|0|
 
-&lt;$checkbox tag=&quot;complete&quot;&gt;Complete?&lt;/$checkbox&gt;</pre>
+&lt;$checkbox tag=&quot;complete&quot;&gt;Complete?&lt;/$checkbox&gt;
+
+[[Rule 318]]</pre>
 </div>
 <div color="#aaff33" created="20150629194656573" creator="Guard13007" icon="$:/core/images/warning" modified="20150629212013436" modifier="Guard13007" title="voting">
 <pre></pre>
