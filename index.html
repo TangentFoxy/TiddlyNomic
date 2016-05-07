@@ -301,8 +301,6 @@ Error message and password prompt
 
 <li>Proposal &quot;removal of quantum effects&quot;</li>
 
-<li>Proposal &quot;repeal clutter&quot;</li>
-
 <li>Proposal &quot;Sparse Propositions&quot;</li>
 
 <li>Proposal &quot;Style Guidelines&quot;</li>
@@ -350,6 +348,8 @@ Error message and password prompt
 <li>Proposal 318</li>
 
 <li>Proposal 319</li>
+
+<li>Proposal 320</li>
 
 <li>rejected</li>
 
@@ -515,9 +515,9 @@ Error message and password prompt
 
 <li>Vote 319</li>
 
-<li>voting</li>
+<li>Vote 320</li>
 
-<li>Voting Quick Reference</li>
+<li>voting</li>
 
 <li>WikiText</li>
 
@@ -6141,7 +6141,7 @@ About</pre>
 <div modified="20150629184527553" modifier="Guard13007" title="$:/state/plugin-info--270617185-$:/themes/tiddlywiki/snowwhite">
 <pre>no</pre>
 </div>
-<div modified="20160505212748471" modifier="Guard13007" title="$:/state/showeditpreview">
+<div modified="20160507030251453" modifier="Guard13007" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
 <div modified="20150701053927398" modifier="Guard13007" title="$:/state/sidebar">
@@ -6180,7 +6180,7 @@ About</pre>
 <div bag="default" created="20140227041101072" creator="G" modified="20150629184103503" modifier="Guard13007" revision="4" title="$:/status/UserName" type="text/vnd.tiddlywiki">
 <pre>Guard13007</pre>
 </div>
-<div list="[[Proposal 319]] [[Vote 319]]" title="$:/StoryList">
+<div list="[[Proposal 320]] [[Vote 320]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20150629184249015" creator="Guard13007" modified="20150707210305111" modifier="Guard13007" title="$:/temp/advancedsearch">
@@ -6332,32 +6332,33 @@ Records:
 |[[Amended|Amended Rules]]|[[Enacted|Enacted Proposals]]|[[Complete|Complete Votes]]|[[Complete|Complete Judgments]]|
 |[[Repealed|Repealed Rules]]|[[Rejected|Rejected Proposals]]| |[[Overruled|Overruled Judgments]]|</pre>
 </div>
-<div created="20160505211506953" creator="Guard13007" modified="20160505212635368" modifier="Guard13007" tags="info" title="Administrator's Quick Reference">
-<pre>!!! New Proposal
+<div created="20160505211506953" creator="Guard13007" modified="20160507032607556" modifier="Guard13007" tags="info" title="Administrator's Quick Reference">
+<pre>!! Voting
 
-# Create tiddler with name &quot;Proposal ''#''&quot;
-## TODO: Replace these instructions with &quot;copy [[template]] and edit appropriately&quot;
-## It needs to be tagged: &quot;proposal&quot;
-## Its type needs to be tagged: &quot;new rule&quot;, &quot;amendment&quot;, or &quot;repeal&quot;
-## Its type needs to be added in a custom field:
-##* ''proposal-type'': &quot;new rule&quot;, &quot;amendment&quot;, or &quot;repeal&quot;
-## Its text needs to be the Proposal itself, followed by a link at the bottom to &quot;Vote ''#''&quot;
-# Create tiddler with name &quot;Vote ''#''&quot;
-## TODO: Replace these instructions with &quot;copy [[template]] and link to appropriate stuff&quot;
-## It needs to be tagged: &quot;vote&quot;
-## It must start with a link to &quot;Proposal ''#''&quot;
-## It must state who has proposed it and the votes recorded (edited as votes come in).
-## If it enacts a new rule or amends a rule, it must end with a link to &quot;Rule ''#''&quot;
+Use [[Templates]] to create new proposals, votes, and rules. Remember to edit the vote template when players become active or inactive (as well as [[Players]]!).
 
-* ''#'' refers to the reference number for //the// proposal/vote/rule.
+* Unanimous vote required to transmute an immutable rule to a mutable rule. (See [[Rule 109]].)
+* Simple majority vote required for all other rule-changes. (See [[Rule 203]].)
 
-!!! Completing a Vote
+!!! Amended / Repealed Rules
 
-Todo re-read the rules about early enactment of rules!
+# Edit the rule in question to put `!!!Amended by [[Proposal #]]` or `!!!Repealed by [[Proposal #]]` at the top with the correct reference number.
+# Add an &quot;amended&quot; or &quot;repealed&quot; tag as appropriate.
+# (If amended) Create the new rule like normal.
 
-TODO: This whole thing again after I make templates and figure out how to copy stuff easily.
+!!! Score-Changes
 
-Question to self: Do we record absence of players when they go inactive?
+| |!Proposing Player|!Player voting for|!Player voting against|
+|!Proposal enacted|+(reference number - 291) * (votes for / total votes), rounded to an integer|0|+10|
+|!Proposal rejected|-(reference number) * (votes against / votes for), rounded to an integer|0|0|
+
+See Rules [[202|Rule 202]], [[204|Rule 204]], and [[316|Rule 316]].
+
+Don't forget to update [[Turn Status]] and [[Players]] when a vote it completed!
+
+!! Judgements
+
+* [[Rule 110]] states that a mutable rule conflicting with an immutable rule becomes *entirely* void. Remember this.
 </pre>
 </div>
 <div color="#8844cc" created="20150629194606267" creator="Guard13007" icon="$:/core/images/new-journal-button" modified="20160505211130438" modifier="Guard13007" title="amended">
@@ -6920,21 +6921,6 @@ Any fractional votes may not be converted back into points.</pre>
 <div created="20150724061533669" creator="Guard13007" modified="20150724061643396" modifier="Guard13007" proposal-type="new rule" tags="proposal [[new rule]] drafting" title="Proposal &quot;removal of quantum effects&quot;">
 <pre>rules can't have things that are or aren't certain things depending on conditions (this would fuck up everything to do with inactive players and honorary players and all sorts of stuff)</pre>
 </div>
-<div created="20150724061359831" creator="Guard13007" modified="20150724062315404" modifier="Guard13007" proposal-type="new rule" tags="[[new rule]] drafting proposal" title="Proposal &quot;repeal clutter&quot;">
-<pre>Create a new rule with the following:
-
-&lt;blockquote&gt;
-
-The following rules are repealed by this rule (for their following reasons):
-
-*[[Rule 201]]: The effect of this rule has been replaced already by [[Rule 303]].
-*[[Rule 304]], [[Rule 305]], [[Rule 307]], [[Rule 309]]: These rules simply added new players, and thus do not need to kept in the active rules.
-*This rule: This rule self-repeals after cleaning out the other unnecessary rules, as it will no longer be required either.
-
-(These actions are permissible according to [[Rule 115]].)
-
-&lt;/blockquote&gt;</pre>
-</div>
 <div created="20150630173431211" creator="Guard13007" modified="20150630174535229" modifier="Guard13007" proposal-type="new rule" tags="drafting proposal [[new rule]]" title="Proposal &quot;Sparse Propositions&quot;">
 <pre>To keep proposals short and increase comprehensibility, players will lose points equal to the amount of words in their proposals divided by one hundred (100), floored (rounded to the nearest lower integer) when their proposals are voted on, regardless of whether individual proposals are enacted or rejected.
 
@@ -7286,6 +7272,23 @@ Judgments are binding (like rules). Rules always supersede Judgments, except whe
 &lt;/blockquote&gt;
 
 [[Vote 319]]</pre>
+</div>
+<div created="20150724061359831" creator="Guard13007" modified="20160507032434792" modifier="Guard13007" proposal-type="new rule" tags="[[new rule]] proposal" title="Proposal 320">
+<pre>Create a new rule with the following:
+
+&lt;blockquote&gt;
+
+The following rules are repealed by this rule (for their following reasons):
+
+*[[Rule 201]]: The effect of this rule has been replaced already by [[Rule 315]].
+*[[Rule 304]], [[Rule 305]], [[Rule 307]], [[Rule 309]], [[Rule 317]]: These rules simply added new players, and thus do not need to kept in the active rules.
+*This rule: This rule self-repeals after cleaning out the other unnecessary rules, as it will no longer be required either.
+
+(These actions are permissible according to [[Rule 115]].)
+
+&lt;/blockquote&gt;
+
+[[Vote 320]]</pre>
 </div>
 <div color="#ff0000" created="20150629194746949" creator="Guard13007" icon="$:/core/images/close-button" modified="20150629201158425" modifier="Guard13007" title="rejected">
 <pre></pre>
@@ -7650,7 +7653,7 @@ Judgments additionally should contain an explanation of why the judgment was mad
 
 Any vote that is conducted that is not a vote on a proposal (hereby known as a &quot;non-standard vote&quot;) must be kept in the official records. Such a vote should be given a reference code, consisting of the letter &quot;N&quot; and an integer, starting with N1 for the first non-standard vote and with the integer part of the code incremented for every non-standard vote beyond the first.</pre>
 </div>
-<div created="20150725061253525" creator="Guard13007" modified="20150725061429468" modifier="Guard13007" mutability="mutable" tags="rule mutable" title="Rule 315">
+<div created="20150725061253525" creator="Guard13007" modified="20160507031211865" modifier="Guard13007" mutability="mutable" tags="rule mutable" title="Rule 315">
 <pre>!!Inactive Players
 
 If a player takes longer than 24 hours to create a proposal on their turn, or takes more than 48 hours (starting at the beginning of another player's turn) to vote on another player's proposal, they become an inactive player.
@@ -7671,20 +7674,19 @@ This rule supersedes any other rules about turn order.
 
 !!New Players
 
-&gt;I'm thinking about removing this as it is unneeded. A new player can be brought in at any time according to Rule 116.
-
 A player may make a proposal at any time (regardless of normal turn order) to bring in a new player. This proposal is numbered as usual, but the player proposing it is allowed to make another proposal.
 
 Such proposals may not contain other rules or stipulations. They may only add a new player.
 
 New players may be brought into the game at any time by creating an extra proposal (this proposal takes place as its own turn completely independently of the normal turn order, any player may make such a proposal at any time).</pre>
 </div>
-<div created="20150725061750588" creator="Guard13007" modified="20150725061815581" modifier="Guard13007" mutability="mutable" tags="rule mutable" title="Rule 316">
+<div created="20150725061750588" creator="Guard13007" modified="20160507031326575" modifier="Guard13007" mutability="mutable" tags="rule mutable" title="Rule 316">
 <pre>&gt;&lt;h3&gt;Losing Proposals&lt;/h3&gt;
 
 When a proposed rule-change is defeated, the player who proposed it loses points equal to the ordinal number of their proposal multiplied by the ratio of unfavorable votes to favorable votes it received, rounded to the nearest integer.
 
-`This is so that players will lose points at the same rate that they can gain them.`</pre>
+`This was intended to make it so that players will lose points at the same rate that they can gain them. Due to bad wording, it actually makes losing a vote carry a severe punishment.`
+</pre>
 </div>
 <div created="20160505175140223" creator="Guard13007" modified="20160506210131842" modifier="Guard13007" mutability="mutable" tags="rule mutable" title="Rule 317">
 <pre>John-Richard Isenhour is hereby a player.</pre>
@@ -7760,7 +7762,7 @@ PROPOSAL TEXT GOES HERE
 &lt;/$set&gt;&lt;/$set&gt;&lt;/$set&gt;
 </pre>
 </div>
-<div created="20160506203448675" creator="Guard13007" modified="20160507002807025" modifier="Guard13007" player="Steven Voorheis" proptype="amendment" ref="319" tags="template" title="TemplateValues">
+<div created="20160506203448675" creator="Guard13007" modified="20160507032543131" modifier="Guard13007" player="Paul Liverman III" proptype="[[new rule]]" ref="320" tags="template" title="TemplateValues">
 <pre>This tiddler exists just for its fields to be modified inside [[Templates]].</pre>
 </div>
 <div bag="default" created="20140227020259516" creator="Guard13007" modified="20150725184030792" modifier="Guard13007" revision="0" tags="info" title="TiddlyNomic" type="text/vnd.tiddlywiki">
@@ -7772,7 +7774,7 @@ PROPOSAL TEXT GOES HERE
 
 This page is an on-going game of Nomic using ~TiddlyNomic. If you want a fresh copy to run your own game, see the [[Downloads]].</pre>
 </div>
-<div created="20160505205420859" creator="Guard13007" modified="20160506210326070" modifier="Guard13007" tags="excludeLists" title="ToDo">
+<div created="20160505205420859" creator="Guard13007" modified="20160507032142116" modifier="Guard13007" tags="excludeLists" title="ToDo">
 <pre>This is a todo list for the maintainer of this site / game / the administrator.. which is Paul, or [[Guard13007]].
 
 # Stuff with [[Tags]], [[Administrator's Quick Reference]], [[Turn Status]], and replacement of [[Voting Quick Reference]]. Check out [[Templates]]!
@@ -7784,6 +7786,7 @@ This page is an on-going game of Nomic using ~TiddlyNomic. If you want a fresh c
 # Make templates for Proposals, Votes, as well as a quick reference for administrating
 # Make every tag tiddler say what it is supposed to be used for, and have excludeLists on it. (Also list every tiddler that has the tag except onces tagged excludeLists.) (Note to self: See [[Turn Status]] current votes list for an example of listing tiddlers.)
 # What is the voting tag for?
+# FAQ idea. ++ Do we record the non-votes of inactive players when they go inactive? No.
 </pre>
 </div>
 <div created="20150629191657698" creator="Guard13007" modified="20160505205933089" modifier="Guard13007" title="ToDo.old">
@@ -8093,47 +8096,36 @@ This page is an on-going game of Nomic using ~TiddlyNomic. If you want a fresh c
 
 [[Rule 318]]</pre>
 </div>
-<div created="20160507002812371" creator="Guard13007" modified="20160507002838123" modifier="Guard13007" tags="vote" title="Vote 319" vote-status="Voting">
+<div created="20160507002812371" creator="Guard13007" modified="20160507025121650" modifier="Guard13007" tags="vote" title="Vote 319" vote-status="Voting">
 <pre>[[Proposal 319]]
 
 |!Proposed by|Steven Voorheis|
 |!Status|&lt;$select field=&quot;vote-status&quot;&gt;&lt;option&gt;Debate&lt;/option&gt;&lt;option&gt;Voting&lt;/option&gt;&lt;option&gt;Enacted&lt;/option&gt;&lt;option&gt;Rejected&lt;/option&gt;&lt;/$select&gt;|
 
 |!Name|!Vote|!Points|
-|John-Richard Isenhour| | |
+|John-Richard Isenhour|yes| |
 |Paul Liverman III|yes| |
 |Amie Stover| | |
 |Steven Voorheis|yes| |
 
 &lt;$checkbox tag=&quot;complete&quot;&gt;Complete?&lt;/$checkbox&gt;</pre>
 </div>
+<div created="20160507032504430" creator="Guard13007" modified="20160507032517949" modifier="Guard13007" tags="vote" title="Vote 320" vote-status="Voting">
+<pre>[[Proposal 320]]
+
+|!Proposed by|Paul Liverman III|
+|!Status|&lt;$select field=&quot;vote-status&quot;&gt;&lt;option&gt;Debate&lt;/option&gt;&lt;option&gt;Voting&lt;/option&gt;&lt;option&gt;Enacted&lt;/option&gt;&lt;option&gt;Rejected&lt;/option&gt;&lt;/$select&gt;|
+
+|!Name|!Vote|!Points|
+|John-Richard Isenhour| | |
+|Paul Liverman III|yes| |
+|Amie Stover| | |
+|Steven Voorheis| | |
+
+&lt;$checkbox tag=&quot;complete&quot;&gt;Complete?&lt;/$checkbox&gt;</pre>
+</div>
 <div color="#aaff33" created="20150629194656573" creator="Guard13007" icon="$:/core/images/warning" modified="20150629212013436" modifier="Guard13007" title="voting">
 <pre></pre>
-</div>
-<div created="20150702083712661" creator="Guard13007" modified="20150707163809501" modifier="Guard13007" tags="info" title="Voting Quick Reference">
-<pre>!!Required Votes
-
-*Transmuting an immutable rule to a mutable rule requires an unanimous vote. (See [[Rule 109]])
-*A simple majority (more than half) is required to pass any other proposal (or other vote (assumed)). (See [[Rule 203]])
-
-!!Proposing Player
-
-*''Passed'': Round to the nearest integer: (proposal number - 291) * (favourable votes / total votes) (See [[Rule 202]])
-*''Failed'': Lose 10 points. (See [[Rule 206]])
-
-!!Other Players
-
-*''Passed'': Players voting against winning proposals receive 10 points. (See [[Rule 204]])
-*''Failed'': N/A
-
-!!Resolution ,,of a vote,,
-
-#Proposal: Remove old status (voting), add new status (enacted / repealed).
-#If old rule is repealed or amended, tag it as such, with a reference TO THE ''PROPOSAL''.
-#If new rule goes into effect, create it.
-#Update current [[Turn Status]].
-#Calculate &amp; apply points gained to [[Players]].
-#Change vote status as appropriate, tag as complete.</pre>
 </div>
 <div created="20140301191211013" creator="Guard13007" modified="20150629202747219" modifier="Guard13007" tags="info" title="WikiText">
 <pre>~WikiText is a concise, expressive way of typing a wide range of text formatting, hypertext and interactive features. It allows you to focus on writing without a complex user interface getting in the way. It is designed to be familiar for users of [[MarkDown|http://daringfireball.net/projects/markdown/]], but with more of a focus on linking and the interactive features.
